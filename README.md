@@ -13,3 +13,12 @@ CREATE TABLE `menu`(
     PRIMARY KEY (id) 
 
 );
+
+//sequelize-cli
+
+create table if not exist `category` (
+    menuId integer references `menu` ,
+    `name` varchar(225) NOT NULL
+),
+
+sequelize-cli db migrate
