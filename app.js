@@ -8,9 +8,11 @@ const Sequelize = require("sequelize")
 
 
 
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const menuRouter = require('./routes/Menu')
+const coffeRouter = require('./routes/Coffe')
 
 var app = express();
 
@@ -26,5 +28,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/menu',menuRouter);
+app.use('/coffe',coffeRouter)
 
 module.exports = app;
